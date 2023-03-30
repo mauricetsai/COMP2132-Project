@@ -1,0 +1,103 @@
+$primary-color: #333;
+$secondary-color: #f1c40f;
+$background-color: #f5f5f5;
+$btn-background: #3498db;
+$btn-hover: #2980b9;
+
+@mixin fade-in($duration) {
+    animation: fadeIn $duration;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+body {
+    background-color: $background-color;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: $primary-color;
+    text-align: center;
+}
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.player,
+.computer {
+    width: 45%;
+    text-align: center;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.dice {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+
+.score {
+    color: $secondary-color;
+    font-weight: bold;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    background-color: $btn-background;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: $btn-hover;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+
+    @include fade-in(1s);
+}
+
+#message {
+    color: $primary-color;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}

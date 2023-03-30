@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dice Game by Maurice Tsai</h1>
+        <div class="game">
+            <div class="player">
+                <h2>Player</h2>
+                <div class="dice-container">
+                    <img src="images/dice-six-faces-0.png" alt="Player dice 1" class="dice" id="player-dice-1">
+                    <img src="images/dice-six-faces-0.png" alt="Player dice 2" class="dice" id="player-dice-2">
+                </div>
+                <p class="round-score">Round <span class="round"></span> Score: <span id="player-round-score">0</span></p>
+                <p class="rolled-dice">Rolled Dice: <span id="player-rolled-dice"></span></p>
+                <p class="score">Score: <span id="player-score">0</span></p>
+            </div>
+            <div class="computer">
+                <h2>Computer</h2>
+                <div class="dice-container">
+                    <img src="images/dice-six-faces-0.png" alt="Computer dice 1" class="dice" id="computer-dice-1">
+                    <img src="images/dice-six-faces-0.png" alt="Computer dice 2" class="dice" id="computer-dice-2">
+                </div>
+                <p class="round-score">Round <span class="round"></span> Score: <span id="computer-round-score">0</span></p>
+                <p class="rolled-dice">Rolled Dice: <span id="computer-rolled-dice"></span></p>
+                <p class="score">Score: <span id="computer-score">0</span></p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="roll-button">Roll Dice</button>
+            <button id="reset-button">Reset Game</button>
+        </div>
+        <p id="message" class="hidden"></p>
+    </div>
+</body>
+
+</html>
